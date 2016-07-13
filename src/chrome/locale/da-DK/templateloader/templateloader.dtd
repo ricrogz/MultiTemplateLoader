@@ -1,0 +1,32 @@
+<!ENTITY optionsTitle "MultiTemplateLoader">
+<!ENTITY TLbrowse "Gennemse">
+<!ENTITY checkboxDefault "Hent dette brevpapir som standard">
+<!ENTITY TLmenuitem1 "Brevpapir for denne identitet">
+<!ENTITY TLmenuitem2 "Hent brevpapir">
+<!ENTITY TLmenuitem3 "Ryd siden">
+<!ENTITY normalbutton "Tom meddelelse">
+<!ENTITY checkboxReply "Brug også dette brevpapir ved besvar og videresend">
+<!ENTITY TLlabel1 "For at virke ved besvar og videresend skal brevpapiret indeholde denne linje:">
+<!ENTITY TLlabel2 "Linjen vil indsætte teksten fra den besvarede eller videresendte meddelelse.">
+<!ENTITY TLlabel3 "Det er muligt at tilpasse den indsatte tekst med css-stile.">
+<!ENTITY extraTitle "Brevpapirliste">
+<!ENTITY extraTemplate "Brevpapir">
+<!ENTITY TLtooltip1 "Vælg et brevpapir som standard for denne identitet">
+<!ENTITY TLtooltip2 "Hent standardbrevpapir for denne identitet">
+<!ENTITY TLtooltip3 "Slet alt i meddelelsen">
+<!ENTITY numTemplate "Brevpapir n.">
+<!ENTITY editList "Rediger liste">
+<!ENTITY editListTip "Rediger listen over brevpapir">
+<!ENTITY loadFile "Åbn en fil med en skabelon">
+<!ENTITY loadFileTip "Åbn en fil med en skabelon i en ny meddelelse">
+<!ENTITY globalOptions "Globale indstillinger">
+<!ENTITY checkHTML "Tjek syntaksen i skabelonens første linje">
+<!ENTITY ignoreEncoding "Ignorer skabelonens tegnsæt">
+<!ENTITY mozsend "Vedhæft ikke eksterne billeder">
+<!ENTITY extTempForId "Eksternt brevpapir for:">
+<!ENTITY addSignature "Add signature">
+<!ENTITY noRecursive "Don't use template for messages with replies inside">
+<!ENTITY autoLoadConfirm "Ask confirm before loading the template in a message with contents">
+<!ENTITY autoLoadEnable "Load automatically the template when switching identity">
+
+

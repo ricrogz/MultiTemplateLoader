@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay SYSTEM "chrome://templateloader/locale/templateloader.dtd">
+<overlay id="templateMainOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script type="application/x-javascript" src="chrome://templateloader/content/templateloader.js" />
+<script type="application/x-javascript" src="chrome://templateloader/content/mainWindowOverlay.js" />
+
+<toolbarbutton id="button-newmsg" type="menu-button">
+        <menupopup id="templateMenu" onpopupshowing="fillTemplateMenu()">
+		<menuitem id="TLitem0" label="&normalbutton;" tooltiptext="&normalbutton;" oncommand="LoadNormal(event); NewMessageHTML();" />
+		<menuitem id="TLitem1" label="" tooltiptext="&numTemplate; 1" oncommand="LoadExtraFile(event,1); NewMessageHTML()" collapsed="true" />
+		<menuitem id="TLitem2" label="" tooltiptext="&numTemplate; 2" oncommand="LoadExtraFile(event,2); NewMessageHTML()" collapsed="true" />
+		<menuitem id="TLitem3" label="" tooltiptext="&numTemplate; 3" oncommand="LoadExtraFile(event,3); NewMessageHTML()" collapsed="true" />
+		<menuitem id="TLitem4" label="" tooltiptext="&numTemplate; 4" oncommand="LoadExtraFile(event,4); NewMessageHTML()" collapsed="true" />
+		<menuitem id="TLitem5" label="" tooltiptext="&numTemplate; 5" oncommand="LoadExtraFile(event,5); NewMessageHTML()" collapsed="true" />
+		<menuitem id="TLitem6" label="" tooltiptext="&numTemplate; 6" oncommand="LoadExtraFile(event,6); NewMessageHTML()" collapsed="true" />
+		<menuitem id="TLitem7" label="" tooltiptext="&numTemplate; 7" oncommand="LoadExtraFile(event,7); NewMessageHTML()" collapsed="true" />
+		<menuitem id="TLitem8" label="" tooltiptext="&numTemplate; 8" oncommand="LoadExtraFile(event,8); NewMessageHTML()" collapsed="true" />
+		<menuitem id="TLitem9" label="" tooltiptext="&numTemplate; 9" oncommand="LoadExtraFile(event,9); NewMessageHTML()" collapsed="true" />
+		<menuseparator />
+		<menuitem id="TLitemList" label="&editList;" tooltiptext="&editListTip;" oncommand="openExtraDialog(event);" />
+		<menuseparator />
+		<menuitem id="TLitemOpen" label="&loadFile;" tooltiptext="&loadFileTip;" url="" oncommand="loadExternalFile(event);" />
+	</menupopup>
+</toolbarbutton>
+
+<menupopup id="taskPopup">
+	<menu label="&optionsTitle;" insertbefore="filtersCmd">
+		<menupopup>
+		<menuitem label="&TLmenuitem1;" tooltiptext="&TLtooltip1;" oncommand="openTemplateDialog()" />
+		</menupopup>
+	</menu>
+</menupopup>
+
+</overlay>

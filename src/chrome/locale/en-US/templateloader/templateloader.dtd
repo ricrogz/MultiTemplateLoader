@@ -1,0 +1,31 @@
+<!ENTITY optionsTitle "MultiTemplateLoader options">
+<!ENTITY TLbrowse "Browse">
+<!ENTITY checkboxDefault "Load this external template as default">
+<!ENTITY TLmenuitem1 "Template for this identity">
+<!ENTITY TLmenuitem2 "Load template for this identity">
+<!ENTITY TLmenuitem3 "Clear page">
+<!ENTITY normalbutton "Blank message">
+<!ENTITY checkboxReply "Use this template also to reply and forward">
+<!ENTITY TLlabel1 "To be used to reply or forward, the template must have this line:">
+<!ENTITY TLlabel2 "This tag will be filled with the text of the reply or of the forwarded message.">
+<!ENTITY TLlabel3 "The tag can be customized with the inline style">
+<!ENTITY extraTitle "Templates list">
+<!ENTITY extraTemplate "Template">
+<!ENTITY TLtooltip1 "Set a template for this identity">
+<!ENTITY TLtooltip2 "Load the template for this identity">
+<!ENTITY TLtooltip3 "Cancel everything from the message">
+<!ENTITY numTemplate "Template n.">
+<!ENTITY editList "Edit list">
+<!ENTITY editListTip "Edit the templates list">
+<!ENTITY loadFile "Load template from a file">
+<!ENTITY loadFileTip "Load a template into the compose window from a file">
+<!ENTITY globalOptions "Global options">
+<!ENTITY checkHTML "Check syntax in template first line">
+<!ENTITY ignoreEncoding "Ignore template charset">
+<!ENTITY mozsend "Don't attach remote images">
+<!ENTITY extTempForId "External template for the identity:">
+<!ENTITY addSignature "Add signature">
+<!ENTITY noRecursive "Don't use template for messages with replies inside">
+<!ENTITY autoLoadConfirm "Ask confirm before loading the template in a message with contents">
+<!ENTITY autoLoadEnable "Load automatically the template when switching identity">
+

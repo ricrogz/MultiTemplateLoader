@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:chrome="http://www.mozilla.org/rdf/chrome#">
+
+	<RDF:Seq RDF:about="urn:mozilla:package:root">
+		<RDF:li RDF:resource="urn:mozilla:package:templateloader"/>
+	</RDF:Seq>
+
+	<RDF:Seq RDF:about="urn:mozilla:overlays">
+		<RDF:li RDF:resource="chrome://messenger/content/messengercompose/messengercompose.xul"/>
+		<RDF:li RDF:resource="chrome://messenger/content/messenger.xul"/>
+	</RDF:Seq>
+
+	<RDF:Seq RDF:about="chrome://messenger/content/messengercompose/messengercompose.xul">
+		<RDF:li>chrome://templateloader/content/templateloader.xul</RDF:li>
+	</RDF:Seq>
+
+	<RDF:Seq RDF:about="chrome://messenger/content/messenger.xul">
+		<RDF:li>chrome://templateloader/content/mainWindowOverlay.xul</RDF:li>
+	</RDF:Seq>
+
+	<RDF:Description RDF:about="urn:mozilla:package:templateloader"
+		chrome:displayName="templateloader 0.2.1.3"
+		chrome:author="Paolo Kaosmos"
+		chrome:name="templateloader"
+		chrome:extension="true"
+		chrome:description="Thunderbird">
+	</RDF:Description>
+
+</RDF:RDF>

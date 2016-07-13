@@ -1,0 +1,32 @@
+<!ENTITY optionsTitle "Opciones de MultiTemplateLoader">
+<!ENTITY TLbrowse "Examinar">
+<!ENTITY checkboxDefault "Carga esta plantilla externa como predeterminada">
+<!ENTITY TLmenuitem1 "Plantilla para esta identidad">
+<!ENTITY TLmenuitem2 "Cargar plantilla para esta identidad">
+<!ENTITY TLmenuitem3 "Página en blanco">
+<!ENTITY normalbutton "Mensaje en blanco">
+<!ENTITY checkboxReply "Usar también esta plantilla para responder y reenviar">
+<!ENTITY TLlabel1 "Para ser usada para responder o reenviar, la plantilla debe contener esta linea:">
+<!ENTITY TLlabel2 "Esta etiqueta será reemplazada con el texto del mensaje al que respondes o el texto del mensaje a reenviar.">
+<!ENTITY TLlabel3 "Esta etiqueta puede ser configurada mediante estilos CSS internos (inline)">
+<!ENTITY extraTitle "Lista de Plantillas">
+<!ENTITY extraTemplate "Plantilla">
+<!ENTITY TLtooltip1 "Escoger una plantilla para esta identidad">
+<!ENTITY TLtooltip2 "Cargar la plantilla para esta identidad">
+<!ENTITY TLtooltip3 "Cancelar todo de este mensaje">
+<!ENTITY numTemplate "Plantilla n.">
+<!ENTITY editList "Editar lista">
+<!ENTITY editListTip "Editar la lista de plantillas">
+<!ENTITY loadFile "Cargar plantilla de archivo">
+<!ENTITY loadFileTip "Cargar plantilla de un archivo en la ventana de composición">
+<!ENTITY globalOptions "Opciones globales">
+<!ENTITY checkHTML "Comprobar sintaxis en la primera linea de la plantilla">
+<!ENTITY ignoreEncoding "Ignorar juego de caracteres de plantilla">
+<!ENTITY mozsend "No adjuntar imágenes remotas">
+<!ENTITY extTempForId "Plantilla externa para esta identidad:">
+<!ENTITY addSignature "Add signature">
+<!ENTITY noRecursive "Don't use template for messages with replies inside">
+<!ENTITY autoLoadConfirm "Ask confirm before loading the template in a message with contents">
+<!ENTITY autoLoadEnable "Load automatically the template when switching identity">
+
+

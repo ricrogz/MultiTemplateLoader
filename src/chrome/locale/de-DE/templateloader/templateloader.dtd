@@ -1,0 +1,34 @@
+<!ENTITY optionsTitle "MultiTemplateLoader Optionen">
+<!ENTITY TLbrowse "Suchen">
+<!ENTITY checkboxDefault "Diese externe Vorlage als Standard laden">
+<!ENTITY TLmenuitem1 "Vorlage dieser Identität">
+<!ENTITY TLmenuitem2 "Lade Vorlage dieser Identität">
+<!ENTITY TLmenuitem3 "Nachrichteninhalt löschen">
+<!ENTITY normalbutton "Leere Nachricht">
+<!ENTITY checkboxReply "Externe Vorlage auch beim Antworten und Weiterleiten laden">
+<!ENTITY TLlabel1 "Um antworten und weiterleiten zu können, muss die Vorlage folgende Zeile enthalten:">
+<!ENTITY TLlabel2 "Dieser HTML-TAG wird mit dem Text der Antwort oder der weitergeleiteten Nachricht ersetzt.">
+<!ENTITY TLlabel3 "Der HTML-TAG kann durch Inline Style Befehle angepasst werden">
+<!ENTITY extraTitle "Vorlagen Liste">
+<!ENTITY extraTemplate "Vorlage">
+<!ENTITY TLtooltip1 "Auswählen einer Vorlage für diese Identität">
+<!ENTITY TLtooltip2 "Lädt die Vorlage für diese Identität">
+<!ENTITY TLtooltip3 "Nachrichteninhalt wird gelöscht">
+<!ENTITY numTemplate "Vorlage n.">
+<!ENTITY editList "Bearbeite Liste">
+<!ENTITY editListTip "Bearbeiten der Vorlagen Liste">
+<!ENTITY loadFile "Lade Vorlage aus einer Datei">
+<!ENTITY loadFileTip "Lädt eine Vorlage aus einer Datei in das Bearbeitungsfenster">
+<!ENTITY globalOptions "Globale Optionen">
+<!ENTITY checkHTML "Überprüfe Syntax der ersten Vorlagenzeile">
+<!ENTITY ignoreEncoding "Ignoriere Zeichensatz der Vorlage">
+<!ENTITY mozsend "Externe Bilder nicht mit anhängen">
+<!ENTITY extTempForId "Externe Vorlage für diese Identität:">
+<!ENTITY addSignature "Signature hinzufügen">
+<!ENTITY noRecursive "Externe Vorlage nicht für Nachrichten verwenden die schon Antworten enthalten">
+<!ENTITY autoLoadConfirm "Warnhinweis beim laden einer Vorlage anzeigen, falls das Nachrichtenfenster Text enthält">
+<!ENTITY autoLoadEnable "Vorlage automatisch laden beim Wechsel der Identität">
+
+
+
+

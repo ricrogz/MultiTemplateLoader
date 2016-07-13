@@ -1,0 +1,32 @@
+<!ENTITY optionsTitle "Options d'MultiTemplateLoader">
+<!ENTITY TLbrowse "Parcourir">
+<!ENTITY checkboxDefault "Charger cette page comme modèle par défaut">
+<!ENTITY TLmenuitem1 "Modèle pour cette identité">
+<!ENTITY TLmenuitem2 "Charger le modèle associé à cette identité">
+<!ENTITY TLmenuitem3 "Effacer la page">
+<!ENTITY normalbutton "Message vide">
+<!ENTITY checkboxReply "Utiliser ce modèle également pour 'Répondre' et 'Transférer'">
+<!ENTITY TLlabel1 "Pour être utilisé en réponse et transfert, le modèle doit contenir cette ligne :">
+<!ENTITY TLlabel2 "Cette zone sera remplie avec le texte du message en réponse ou à transférer.">
+<!ENTITY TLlabel3 "Cette zone peut être personnalisée avec une feuille de style interne">
+<!ENTITY extraTitle "Liste des modèles">
+<!ENTITY extraTemplate "Modèle">
+<!ENTITY TLtooltip1 "Définit un modèle pour cette identité">
+<!ENTITY TLtooltip2 "Charge le modèle pour cette identité">
+<!ENTITY TLtooltip3 "Efface tout le contenu de la page">
+<!ENTITY numTemplate "Modèle n.">
+<!ENTITY editList "Editer la liste">
+<!ENTITY editListTip "Édite la liste des modèles">
+<!ENTITY loadFile "Charger le modèle d'un fichier">
+<!ENTITY loadFileTip "Charger le modèle d'un fichier">
+<!ENTITY globalOptions "Options générales">
+<!ENTITY checkHTML "Vérifier la syntaxe de la première ligne du modèle">
+<!ENTITY ignoreEncoding "Ignorer le jeu de caractères du modèle">
+<!ENTITY mozsend "Ne pas lier d'image distante">
+<!ENTITY extTempForId "Modèle externe pour l'identité :">
+<!ENTITY addSignature "Ajouter une signature">
+<!ENTITY noRecursive "Don't use template for messages with replies inside">
+<!ENTITY autoLoadConfirm "Ask confirm before loading the template in a message with contents">
+<!ENTITY autoLoadEnable "Load automatically the template when switching identity">
+
+

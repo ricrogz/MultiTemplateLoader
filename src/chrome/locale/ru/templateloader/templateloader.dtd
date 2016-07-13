@@ -1,0 +1,31 @@
+<!ENTITY optionsTitle "Настройки MultiTemplateLoader">
+<!ENTITY TLbrowse "Обзор">
+<!ENTITY checkboxDefault "Использовать этот шаблон по умолчанию">
+<!ENTITY TLmenuitem1 "Шаблон для этого адреса электронной почты">
+<!ENTITY TLmenuitem2 "Загрузить шаблон для этого адреса электронной почты">
+<!ENTITY TLmenuitem3 "Очистить сообщение">
+<!ENTITY normalbutton "Обычное сообщение">
+<!ENTITY checkboxReply "Использовать шаблон для ответа и пересылки">
+<!ENTITY TLlabel1 "Для использования шаблона для ответов и пересылки, добавьте в него строку:">
+<!ENTITY TLlabel2 "Этот тег будет заполнен содержимым ответа или пересылаемого сообщения.">
+<!ENTITY TLlabel3 "Его вид можно настроить с помощью инлайновых стилей.">
+<!ENTITY extraTitle "Список шаблонов">
+<!ENTITY extraTemplate "Шаблон">
+<!ENTITY TLtooltip1 "Настроить шаблон для этого адреса электронной почты">
+<!ENTITY TLtooltip2 "Загрузить шаблон этого адреса электронной почты">
+<!ENTITY TLtooltip3 "Очистка содержимого сообщения">
+<!ENTITY numTemplate "Шаблон n.">
+<!ENTITY editList "Редактировать список">
+<!ENTITY editListTip "Редактировать список шаблонов">
+<!ENTITY loadFile "Загрузить шаблон из файла">
+<!ENTITY loadFileTip "Создать новое сообщение на основе шаблона из файла">
+<!ENTITY globalOptions "Общие настройки">
+<!ENTITY checkHTML "Проверять синтаксис по первой строке шаблона">
+<!ENTITY ignoreEncoding "Игнорировать кодировку шаблона">
+<!ENTITY mozsend "Не прикреплять внешние изображения как вложения">
+<!ENTITY extTempForId "Шаблон для адреса электронной почты:">
+<!ENTITY addSignature "Добавлять подпись">
+<!ENTITY noRecursive "Не использовать шаблон для сообщений с ответами внутри">
+<!ENTITY autoLoadConfirm "Проверять наличие изменений в сообщении перед применением шаблона">
+<!ENTITY autoLoadEnable "Автоматически загружать шаблон при переключении адреса электронной почты">
+

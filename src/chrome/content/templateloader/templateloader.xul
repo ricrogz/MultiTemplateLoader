@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://templateloader/content/templateloader.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://templateloader/locale/templateloader.dtd">
+<overlay id="TemplateOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script type="application/x-javascript" src="chrome://templateloader/content/templateloader.js" />
+<script type="application/x-javascript" src="chrome://templateloader/content/mainWindowOverlay.js" />
+
+<script type="text/javascript">
+<![CDATA[
+function ETLaddListeners() {
+	window.removeEventListener("load", ETLaddListeners, false);
+	window.addEventListener("compose-window-reopen", PreLoadTemplate, true);
+	document.getElementById("content-frame").addEventListener("load", PreLoadTemplate, true);
+	document.getElementById("msgIdentityPopup").addEventListener("command", AutoloadTemplateForId, false);
+}
+window.addEventListener("load", ETLaddListeners, false);
+]]>
+</script>
+
+<commandset id="composeCommands">
+	<command id="cmd_loadTemplate" oncommand="LoadTemplateForId()" />
+</commandset>
+
+<keyset id="tasksKeys">
+	<key id="key_loadTemplate" key="T" modifiers="accel, shift" command="cmd_loadTemplate" />
+</keyset>
+
+<menupopup id="taskPopup">
+	<menu label="&optionsTitle;">
+        <menupopup id="templateMenu" onpopupshowing="fillTemplateMenu()">
+        <menuitem id="TLitem0" label="&normalbutton;" tooltiptext="&normalbutton;" oncommand="ETLloadBlank()" />
+        <menuitem id="TLitem1" label="" tooltiptext="&numTemplate; 1" oncommand="LoadExtraFile(event,1); insertTemplate(1)" collapsed="true" />
+        <menuitem id="TLitem2" label="" tooltiptext="&numTemplate; 2" oncommand="LoadExtraFile(event,2); insertTemplate(2)" collapsed="true" />
+        <menuitem id="TLitem3" label="" tooltiptext="&numTemplate; 3" oncommand="LoadExtraFile(event,3); insertTemplate(3)" collapsed="true" />
+        <menuitem id="TLitem4" label="" tooltiptext="&numTemplate; 4" oncommand="LoadExtraFile(event,4); insertTemplate(4)" collapsed="true" />
+        <menuitem id="TLitem5" label="" tooltiptext="&numTemplate; 5" oncommand="LoadExtraFile(event,5); insertTemplate(5)" collapsed="true" />
+        <menuitem id="TLitem6" label="" tooltiptext="&numTemplate; 6" oncommand="LoadExtraFile(event,6); insertTemplate(6)" collapsed="true" />
+        <menuitem id="TLitem7" label="" tooltiptext="&numTemplate; 7" oncommand="LoadExtraFile(event,7); insertTemplate(7)" collapsed="true" />
+        <menuitem id="TLitem8" label="" tooltiptext="&numTemplate; 8" oncommand="LoadExtraFile(event,8); insertTemplate(8)" collapsed="true" />
+        <menuitem id="TLitem9" label="" tooltiptext="&numTemplate; 9" oncommand="LoadExtraFile(event,9); insertTemplate(9)" collapsed="true" />
+        <menuseparator />
+        <menuitem id="TLitemList" label="&editList;" tooltiptext="&editListTip;" oncommand="openExtraDialog(event);" />
+        <menuseparator />
+        <menuitem id="TLitemOpen" label="&loadFile;" tooltiptext="&loadFileTip;" url="" oncommand="loadExternalFile(event);" />
+    </menupopup>
+	</menu>
+</menupopup>
+
+<toolbarpalette id="MsgComposeToolbarPalette">
+	<toolbarbutton id="ETLbutton" command="cmd_loadTemplate" label="&extraTemplate;" tooltiptext="&TLtooltip2;" class="toolbarbutton-1" />
+</toolbarpalette>
+
+</overlay>
+

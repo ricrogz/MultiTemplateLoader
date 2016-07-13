@@ -1,0 +1,31 @@
+<!ENTITY optionsTitle "Opzioni per MultiTemplateLoader">
+<!ENTITY TLbrowse "Sfoglia">
+<!ENTITY checkboxDefault "Carica questo modello esterno come default">
+<!ENTITY TLmenuitem1 "Modello associato a questa identità">
+<!ENTITY TLmenuitem2 "Carica modello associato">
+<!ENTITY TLmenuitem3 "Svuota pagina">
+<!ENTITY normalbutton "Messaggio vuoto">
+<!ENTITY checkboxReply "Usa il modello anche per rispondere o inoltrare">
+<!ENTITY TLlabel1 "Per essere usato per rispondere e inoltrare, il modello deve contenere questa riga:">
+<!ENTITY TLlabel2 "Questo tag verrà riempito con il testo della risposta o del messaggio inoltrato.">
+<!ENTITY TLlabel3 "Il tag si può personalizzare attraverso lo stile in linea.">
+<!ENTITY extraTitle "Lista modelli">
+<!ENTITY extraTemplate "Modello">
+<!ENTITY TLtooltip1 "Imposta il modello che è associato all'identità corrente">
+<!ENTITY TLtooltip2 "Carica il modello che è associato all'identità corrente">
+<!ENTITY TLtooltip3 "Svuota la pagina di tutti i contenuti">
+<!ENTITY numTemplate "Modello n.">
+<!ENTITY editList "Modifica lista">
+<!ENTITY editListTip "Modifica la lista dei modelli">
+<!ENTITY loadFile "Carica il modello da un file">
+<!ENTITY loadFileTip "Carica il modello da un file nella finestra di composizione">
+<!ENTITY globalOptions "Opzioni globali">
+<!ENTITY checkHTML "Controlla la sintassi della prima riga del modello">
+<!ENTITY ignoreEncoding "Ignora la codifica indicata nel modello">
+<!ENTITY mozsend "Non allegare le immagini remote">
+<!ENTITY extTempForId "Modello esterno per l'indentità:">
+<!ENTITY addSignature "Inserisci la firma">
+<!ENTITY noRecursive "Non usare il modello per i messaggi che contengono risposte">
+<!ENTITY autoLoadConfirm "Chiedi conferma prima di caricare il modello in un messaggio modificato">
+<!ENTITY autoLoadEnable "Carica automaticamente il modello quando si cambia identità">
+

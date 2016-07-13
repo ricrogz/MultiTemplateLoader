@@ -1,0 +1,32 @@
+<!ENTITY optionsTitle "MultiTemplateLoader 選項">
+<!ENTITY TLbrowse "瀏覽">
+<!ENTITY checkboxDefault "載入此外部模板作為預設">
+<!ENTITY TLmenuitem1 "這個識別身份的模板">
+<!ENTITY TLmenuitem2 "重新載入這個識別身份的模板">
+<!ENTITY TLmenuitem3 "清除郵件內容">
+<!ENTITY normalbutton "空白郵件">
+<!ENTITY checkboxReply "回信與轉寄也使用此模板">
+<!ENTITY TLlabel1 "要用於回信與轉寄，模板中必須包含這行:">
+<!ENTITY TLlabel2 "此標籤將在回信與轉寄時用來插入原始郵件的內容。">
+<!ENTITY TLlabel3 "此標籤可以用內部 CSS 來自訂樣式">
+<!ENTITY extraTitle "模板清單">
+<!ENTITY extraTemplate "模板">
+<!ENTITY TLtooltip1 "替這個識別身分設定一個模板">
+<!ENTITY TLtooltip2 "重新載入這個識別身份的模板">
+<!ENTITY TLtooltip3 "清除郵件中的所有內容">
+<!ENTITY numTemplate "模板 n.">
+<!ENTITY editList "編輯清單">
+<!ENTITY editListTip "編輯模板清單">
+<!ENTITY loadFile "從檔案載入模板">
+<!ENTITY loadFileTip "從檔案載入模板到編輯郵件視窗">
+<!ENTITY globalOptions "全域選項">
+<!ENTITY checkHTML "檢查模板中第一行語法">
+<!ENTITY ignoreEncoding "忽略模板編碼">
+<!ENTITY mozsend "不要附加遠端圖檔">
+<!ENTITY extTempForId "套用外部模板給這個識別身分:">
+<!ENTITY addSignature "加入簽名">
+<!ENTITY noRecursive "Don't use template for messages with replies inside">
+<!ENTITY autoLoadConfirm "Ask confirm before loading the template in a message with contents">
+<!ENTITY autoLoadEnable "Load automatically the template when switching identity">
+
+
