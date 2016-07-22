@@ -117,7 +117,7 @@ function openTemplateDialog() {
 }
 
 function ETLmigratePrefs() {
-	var prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
+	var prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
 	if (! prefs.getBoolPref("extensions.multitemplateloader.migrate_prefs"))
 		return;
 	var branch = prefs.getBranch("extensions.multitemplateloader.");

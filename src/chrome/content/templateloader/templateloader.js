@@ -199,7 +199,7 @@ function LoadDataFromUrl(templatePath,templateReply,manually_or_new) {
 
 function ETLstoreHTML() {
 	if (! gETL_origHTML && gETL_editor)
-		gETL_origHTML = gETL_editor.document.body.innerHTML;
+		gETL_origHTML = gETL_editor.document.body.textContent;
 }
 
 function LoadTemplate(templateReply,manually_or_new) {
@@ -269,7 +269,7 @@ function LoadTemplateIntoEditor(templateReply, templatePath, data, manually_or_n
 		gETL_body = gETL_editor.document.body;
 		// Copy the original body innerHTML in a variable
 		// Must be unescaped, otherwise we loose some path corrispondeces
-		var bodyHTML = unescape(gETL_body.innerHTML);
+		var bodyHTML = unescape(gETL_body.textContent);
 		// Load the template into the editor
 		data = correctBodyBackgroundAttr(data,templatePath);
 		if (gTemplateCharset && ! tempLoadPrefs.getBoolPref("extensions.multitemplateloader.charset.ignore"))
@@ -304,7 +304,7 @@ function LoadTemplateIntoEditor(templateReply, templatePath, data, manually_or_n
 		var subDiv = gETL_editor.document.getElementById("subjectDIV");
 		if (subDiv) {
 			if (! document.getElementById("msgSubject").value)
-				document.getElementById("msgSubject").value = subDiv.innerHTML;
+				document.getElementById("msgSubject").value = subDiv.textContent;
 			subDiv.parentNode.removeChild(subDiv);
 		}
 
@@ -314,7 +314,7 @@ function LoadTemplateIntoEditor(templateReply, templatePath, data, manually_or_n
 		// This special div is for predefined content (possibile - for ex. - in mailto links)
 		var contentDiv = gETL_editor.document.getElementById("predefinedDIV");
 		if (templateReply && quoteDiv) {
-			quoteDiv.innerHTML = gETL_origHTML;
+			quoteDiv.textContent = gETL_origHTML;
 			if (contentDiv)
 				contentDiv.parentNode.removeChild(contentDiv);
 		}
@@ -329,7 +329,7 @@ function LoadTemplateIntoEditor(templateReply, templatePath, data, manually_or_n
 					if (bodyInnerText != "") {
 						// Delete "id" attribute, to avoid problems if the message would be reloaded
 						contentDiv.removeAttribute("id");
-						contentDiv.innerHTML = bodyHTML;
+						contentDiv.textContent = bodyHTML;
 					}
 					else
 						contentDiv.parentNode.removeChild(contentDiv);
@@ -337,7 +337,7 @@ function LoadTemplateIntoEditor(templateReply, templatePath, data, manually_or_n
 				else if ( bodyInnerText != "") {
 					// Append predefined content to body element
 					var newDiv = gETL_editor.document.createElement("div");
-					newDiv.innerHTML = bodyHTML;
+					newDiv.textContent = bodyHTML;
 					gETL_body.appendChild(newDiv);
 				}
 			}
@@ -504,7 +504,7 @@ function insertTemplate(extra) {
 
     var data = "";
     if(templatePath.indexOf("http") == 0 || templatePath.indexOf("ftp") == 0)
-        data = LoadDataFromUrl(templatePath,templateReply,manually_or_new);
+        data = LoadDataFromUrl(templatePath,true,true);
     else {
         data = LoadDataFromFile(templatePath);
         if (data)
