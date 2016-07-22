@@ -6,7 +6,7 @@ Made it some time ago to easen email sending and replying (it is useful to be ab
 
 **Extension is now working in Thunderbird 45.2.0**
 
-Link to official Mozilla addon page: https://addons.mozilla.org/es/firefox/addon/multitemplateloader-v0-1-1/
+Link to official Mozilla addon page: https://addons.mozilla.org/es/firefox/addon/multitemplateloader/
 
 
 # Documentation
