@@ -189,7 +189,19 @@ ETLlistener.prototype = {
 };
 
 function LoadDataFromUrl(templatePath,templateReply,manually_or_new) {
-	var channel = Components.classes["@mozilla.org/network/io-service;1"].createInstance(Components.interfaces.nsIIOService).newChannel(templatePath,null,null);
+	var Ci = Components.interfaces;
+	var channel = Components.classes["@mozilla.org/network/io-service;1"]
+		.createInstance(Components.interfaces.nsIIOService)
+		.newChannel2(
+			templatePath,
+			null,
+			null,
+			null,
+			Services.scriptSecurityManager.getSystemPrincipal(),
+            null,
+            Ci.nsILoadInfo.SEC_NORMAL,
+            Ci.nsIContentPolicy.TYPE_OTHER
+        );
 	var listener = new ETLlistener();
 	listener.templatePath = templatePath;
 	listener.templateReply = templateReply;
