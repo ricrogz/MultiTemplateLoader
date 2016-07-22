@@ -7,32 +7,18 @@ xmlns:em="http://www.mozilla.org/2004/em-rdf#">
 	
 		<em:id>{d4a7903e-3122-4194-8fc5-4bebfb7a0b1f}</em:id>
 		<em:name>MultiTemplateLoader</em:name>
-		<em:version>0.1</em:version>
+		<em:version>0.1.1</em:version>
 		<em:description>Loads from multiple templates for new/reply messages</em:description>
 		<em:creator>ricrogz</em:creator>
 		<em:contributor>Paolo Kaosmos</em:contributor>
 		<em:contributor>Christian Mayer</em:contributor>
 		<em:homepageURL>https://github.com/ricrogz/MultiTemplateLoader</em:homepageURL>
-		<em:updateURL></em:updateURL>
-		<em:file>
-			<Description about="urn:mozilla:extension:file:templateloader.jar">
-				<em:package>content/templateloader/</em:package>
-				<em:locale>locale/en-US/templateloader/</em:locale>
-				<em:locale>locale/it-IT/templateloader/</em:locale>
-				<em:locale>locale/fr-FR/templateloader/</em:locale>
-				<em:locale>locale/da-DK/templateloader/</em:locale>
-				<em:locale>locale/pl-PL/templateloader/</em:locale>
-				<em:locale>locale/zh-TW/templateloader/</em:locale>
-				<em:locale>locale/es-ES/templateloader/</em:locale>
-				<em:locale>locale/de-DE/templateloader/</em:locale>
-			</Description>
-		</em:file>
 
 		<em:targetApplication>
 			<Description>
 				 <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
 						<em:minVersion>1.5</em:minVersion>
-						<em:maxVersion>100.*</em:maxVersion>
+						<em:maxVersion>51.0</em:maxVersion>
 			</Description>
 		</em:targetApplication>
 

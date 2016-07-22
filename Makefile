@@ -1,2 +1,2 @@
 all:
-	cd src && zip -r ../MultiTemplateLoader-0.1.xpi *
+	cd src && zip -r ../MultiTemplateLoader-0.1.1.xpi *

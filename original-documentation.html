@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>ExternalTemplateLoader</title>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="stile.css">
+</head>
+<body>
+<div id="container">
+<div class="top"></div>
+<div class="menu">
+<br><br>
+<a href="mailto:kaosmos@nic-nac-project.org" class="email">
+<img src="email.gif"  alt="email" border="0"></a><br>
+<br>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="BNW6K9BPVNNPE">
+<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypal.com/it_IT/i/scr/pixel.gif" width="1" height="1">
+</form><br><br><br>
+<ul class="ulmenu">
+  <li><a href="templateloader.html">Italian version</a></li>
+  <li><a href="index-en.html">Homepage</a></li>
+</ul>
+<br><br><br>
+<img src="nosexism.jpg" style="margin-left:40px;" alt="against sexism">
+<br><br><br>
+<img src="340296.gif" alt="linux user n°340296">
+</div>
+<div class="main">
+<h2 class="centertext">ExternalTemplateLoader</h2>
+<p>This extension for Thunderbird gives you the possibility to load an external template for your messages, from a common html page.<br>
+You can set a template for each identity e you can choose if you want to load it automatically with every new message or load it by hand.<br>
+Moreover, from the 0.2 version, you've also a list with 5 templates (increased to 9 from the 0.2.1.3 version), that you can use from the dropdown menu on the button "New message" in the toolbar.<br>
+From the 0.2.1 version you can also load directly a template from a file, choosing in the menu the item "Load template from a file".<br><br>
+<b>How use a template:</b> write a html file with the template, then open the compose window, go in Tools --> ExternalTemplateLoader options --> Template for this identity and pick your file. From here you can also choose if load it automatically or not.<br>
+From 0.2.3 version you can have the options dialog also from main window, choosing Tools --> ExternalTemplateLoader options --> Template for this identity (the identity will be the first one for the selected account).<br>
+From 0.2.3 version, in the compose window, you can also load manually the template with CTRL-SHIFT-T.<br>
+Otherwise you can load a template from the list in the dropdown menu on the button "New message" --> "Edit list" in the toolbar.<br>
+If the file you choose doesn't exist, the item in the dropdown menu is grayed out.<br><br>
+Warning, use always absoulte paths in the template.<br>
+The only exception is the background attribute of the BODY tag, where you can use just the name of the file, if the image file is in the same directory of the main html file.<br><br>
+<b>How to use a template to reply and forward;</b> first of all you must enable the option from the compose window, in Tools --> ExternalTemplateLoader options --> Template for this identity.
+Then you must insert in the template this code:<br>
+&lt;div id="quoteDIV"&gt;&amp;nbsp;&lt;/div&gt;<br>
+This tag can be customized through the "style" attribute and will be filled with the replied or forwarded text.<br>
+Sometimes it can be useless to load the template when the message has inside other replies; from 0.3.3 version it's possible to disable template loading in this case.<br><br>
+<b>How to attach files to the template</b> (from 0.2.5 version): you can attach files to the template, adding the following line:<br>
+&lt;div id="attachmentDIV" src="file:///<i>path file1</i>,file:///<i>path file2</i>"&gt;&amp;nbsp;&lt;/div&gt;<br><br>
+
+<b>Hot to place the cursor in the template for replies</b> (from 0.3.6 version): insert in the template this code:<br>
+&lt;div id="focusDIV"&gt;&amp;nbsp;&lt;/div&gt;<br><br>
+<b>Predefined text in "mailto" links</b> (from 0.3 version): if the compose window is opened by a "mailto" link with
+predefined text, this text will be appended by default at end of the template. You can force it in another position, using
+a line like the following one:<br>
+&lt;div id="predefinedDIV"&gt;&amp;nbsp;&lt;/div&gt;<br><br>
+<b>How to load a template:</b> if you've not enabled the automatic loading, you can go in Tools --> ExternalTemplateLoader  options--> Load template.<br>
+Otherwise you can load a template not specific for the identity from the list in the dropdown menu on the button "New message" in the toolbar.<br><br>
+<b>Other options:</b>Fom Tools --> ExternalTemplateLoader options --> Clear page, you can have a blank page deleting everything (the template but also, WARNING, what you've written!!!).<br><br>
+<b>External template example:</b>: here is a template example for the extension:<br>
+<textarea rows="9" cols="60" readonly="readonly">
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="color:blue;" bgcolor="#FFFFDD"&gt;
+&lt;p&gt;This is the beginning of the message&lt;/p&gt;
+&lt;div id="quoteDIV" style="color:black;"&gt;&amp;nbsp;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea><br>
+In this example, the template will produce a mail with yellow background, the new text in blu and the replied or forwarded text in black.
+<br><br>
+<b>Features and bugs:</b> The format bar of the compose window can be not exact with the attributes of the template.<br>
+From the 0.2.2 version, the template is loaded properly also if it has not-ascii chars and its encoding is applied also to the message.<br>
+Note: if you use a template loaded from remote, the encoding is automatically set to UTF8.<br><br>
+<b>Localization:</b> the extension has english, italian, (thanks to J.B.Marcon) french, (thanks to Kim Ludvigsen) danish, (thanks to Arkadius) polish, (thanks to Jackbin) chinese traditional, (thanks to Sebastian Hosp) german, (thanks to Pavel V. Rochnyack) russian translations.<br><br>
+<i>Changelog 0.2.1.3 version:</i><br>
+- increased to 9 the number of templates in the dropdown menu of the "New message" button;<br>
+- added an hidden option to turn off the check of the beginning of the html file;<br>
+<i>Changelog 0.2.2 version:</i><br>
+- the template is loaded properly even if it has not-ascii chars;<br>
+- the template charset is applied to the message;<br>
+- compatibility with Thunderbird 2.0.<br>
+<i>Changelog 0.2.3 version:</i><br>
+- options dialog can be opened also from main window;<br>
+- added an option not to attach automatically the remote images;<br>
+- added a shortcut Ctrl-Shift-T from compose window, to load the template;<br>
+- added the polish and chinese traditional locales;<br>
+- enabled the auto update;<br>
+<i>Changelog 0.2.4 version:</i><br>
+- possibility to load as template also a remote file (with the contribute of Christian Mayer);<br>
+<i>Changelog 0.2.5 version:</i><br>
+- improved options panel;<br>
+- possibility to attach files to the template;<br>
+- added german locale;<br>
+<i>Changelog 0.2.6 version:</i><br>
+- fixed a bug;<br>
+- loading template doesn't delete signature;<br>
+<i>Changelog 0.3 version:</i><br>
+- code deeply rewritten;<br>
+- new method to load the template, faster and safer;<br>
+- the template is loaded also from "mailto" links;<br>
+- correct cursor position in replies;<br>
+- fixed some minor bugs;<br>
+<i>Changelog 0.3.1 version:</i><br>
+- options panel more user-friendly;<br>
+- the signature is not added automatically anymore, but according to a per-identity option;<br>
+<i>Changelog 0.3.2 version:</i><br>
+- fixed a bug about reply/forward with a remote template;<br>
+<i>Changelog 0.3.3 version:</i><br>
+- fixed some bugs and code improved;<br>
+- possibility to disable template loading for messages with replies inside;<br>
+<i>Changelog 0.3.3.1 version:</i><br>
+- fixed a regression about adding signature;<br>
+<i>Changelog 0.3.3.2/0.3.3.3 version:</i><br>
+- fixed a regression with secondary identities;<br>
+<i>Changelog 0.3.4.1 version:</i><br>
+- compatibility with Thunderbird 3;<br>
+- fixed some bugs;<br>
+<i>Changelog 0.3.4.2 version:</i><br>
+- compatibility with Thunderbird 3.1;<br>
+<i>Changelog 0.3.4.3 version:</i><br>
+- compatibility with Thunderbird 5;<br>
+<i>Changelog 0.3.5.1 version:</i><br>
+- compatibility with Thunderbird 24;<br>
+<i>Changelog 0.3.6 version:</i><br>
+- fixed a bug with Thunderbird 24;<br>
+- possibility to place the cursor in the template for replies;<br>
+<i>Changelog 0.4 version:</i><br>
+- automatic loading of the template when switching identity;<br>
+- toolbar icon to load the template for the current identity;<br>
+- possibility to set the subject of the new messages in the template;<br>
+- confirm request before loading the template if the message has been modified;<br>
+- some minor bugs fixed;<br>
+<i>Changelog 0.4.1 version:</i><br>
+- fixed a bug with forwards;<br>
+- more consistent behaviour with replies and forwards;<br>
+<i>Changelog 0.4.2 version:</i><br>
+- fixed a but with forwards with attachments;<br>
+- added russian translation;<br>
+<i>Changelog 0.4.3 version:</i><br>
+- compatibility with Thunderbird 31;<br>
+<i>Changelog 0.4.4 version:</i><br>
+- fixed a bug with attachments;
+</p>
+<p>Download <a href="externalTemplateLoader-0.4.4.xpi">ExternalTemplateLoader</a> - 0.4.4 version</p>
+</div>
+</div>
+</body>
+</html>
+
+
