@@ -8,12 +8,17 @@ function fillTemplateMenu() {
 	for (i=1;i<10;i++) {
 		filename = "";
 		// If the pref of this index is equal to "", there is no item to build
+		var btn = document.getElementById("BTLitem"+i);
 		if (tempLoadPrefs.getPrefType("extensions.multitemplateloader.extra.file"+i) == 0) {
 			document.getElementById("TLitem"+i).setAttribute("collapsed", "true");
+			if (btn) btn.setAttribute("collapsed", "true");
 			continue;
 		}
-		else
+		else {
 			document.getElementById("TLitem"+i).removeAttribute("collapsed");
+			if (btn) btn.removeAttribute("collapsed");
+
+		}
 		// If there is an error in nsILocalFile we skip this item
 		try {
 			var templatePath = tempLoadPrefs.getCharPref("extensions.multitemplateloader.extra.file"+i);
@@ -21,24 +26,37 @@ function fillTemplateMenu() {
 				file.initWithPath(templatePath);
 				// Strip away the htm(l) extension
 				filename = file.leafName.split(".htm");
-				document.getElementById("TLitem"+i).label = filename[0];
+				document.getElementById("TLitem"+i).label = i + ". " + filename[0];
+				if (btn) btn.label = i + ". " + filename[0];
 				if (! file.exists()) {
 					document.getElementById("TLitem"+i).setAttribute("style", "font-style: oblique");
 					document.getElementById("TLitem"+i).setAttribute("disabled", "true");
+					if (btn) {
+						btn.setAttribute("style", "font-style: oblique");
+						btn.setAttribute("disabled", "true");
+					}
 				}
 				else {
 					document.getElementById("TLitem"+i).removeAttribute("style");
 					document.getElementById("TLitem"+i).removeAttribute("disabled");
+					if (btn) {
+						btn.removeAttribute("style");
+						btn.removeAttribute("disabled");
+					}
 				}
 			 }
 			else {
 				filename = templatePath.split("/");
 				var filename_noext = filename[filename.length-1];
 				filename_noext = filename_noext.substring(0,filename_noext.lastIndexOf("."));
-				document.getElementById("TLitem"+i).label = "[HTTP] "+filename_noext;
+				document.getElementById("TLitem"+i).label = i + ". [HTTP] "+filename_noext;
+				if (btn) btn.label = i + ". [HTTP] "+filename_noext;
 			}
 		}
-			catch(e) {document.getElementById("TLitem"+i).setAttribute("collapsed", "true");}	
+			catch(e) {
+				document.getElementById("TLitem"+i).setAttribute("collapsed", "true");
+				if (btn) btn.setAttribute("collapsed", "true");
+			}
 	}
 }
 
@@ -91,9 +109,9 @@ function openTemplateDialog() {
 		var folderResource = GetSelectedFolderResource();
 		var msgFolder = folderResource.QueryInterface(Components.interfaces.nsIMsgFolder);
 	}
-	var AccManager = Components.classes["@mozilla.org/messenger/account-manager;1"].getService(Components.interfaces.nsIMsgAccountManager); 
+	var AccManager = Components.classes["@mozilla.org/messenger/account-manager;1"].getService(Components.interfaces.nsIMsgAccountManager);
 	var identity = AccManager.getFirstIdentityForServer(msgFolder.server);
-	if (! identity) 
+	if (! identity)
 		identity = AccManager.defaultAccount.defaultIdentity;;
 	window.openDialog("chrome://templateloader/content/templateOptions.xul", "", "chrome,modal,centerscreen", identity);
 }

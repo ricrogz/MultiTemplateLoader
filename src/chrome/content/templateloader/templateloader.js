@@ -29,7 +29,7 @@ function PreLoadTemplate() {
 		return;
 	var recycled = gMsgCompose.recycledWindow;
 	var type = gMsgCompose.type;
-	var timeout = tempLoadPrefs.getIntPref("extensions.externaltemplateloader.load.delay");
+	var timeout = tempLoadPrefs.getIntPref("extensions.multitemplateloader.load.delay");
 
 	try {
 		// If the message is not in HTML format, exit
@@ -37,21 +37,21 @@ function PreLoadTemplate() {
 			return;
 		// Read the template prefs for the current identity
 		gETL_currentIdentity = getCurrentIdentity();
-		var temp = tempLoadPrefs.getBoolPref("extensions.externaltemplateloader.load.normal");
-		var extra = tempLoadPrefs.getIntPref("extensions.externaltemplateloader.load.extra");
-		if (tempLoadPrefs.getPrefType("extensions.externaltemplateloader."+gETL_currentIdentity.key+".enable") != 0)
-			var enableTemplate = tempLoadPrefs.getBoolPref("extensions.externaltemplateloader."+gETL_currentIdentity.key+".enable");
+		var temp = tempLoadPrefs.getBoolPref("extensions.multitemplateloader.load.normal");
+		var extra = tempLoadPrefs.getIntPref("extensions.multitemplateloader.load.extra");
+		if (tempLoadPrefs.getPrefType("extensions.multitemplateloader."+gETL_currentIdentity.key+".enable") != 0)
+			var enableTemplate = tempLoadPrefs.getBoolPref("extensions.multitemplateloader."+gETL_currentIdentity.key+".enable");
 		else
 			var enableTemplate = false;
 
 		var enableReplyTemplate = false;
-		if (enableTemplate && tempLoadPrefs.getPrefType("extensions.externaltemplateloader."+gETL_currentIdentity.key+".enable_reply_forward") != 0)
-			enableReplyTemplate = tempLoadPrefs.getBoolPref("extensions.externaltemplateloader."+gETL_currentIdentity.key+".enable_reply_forward");
+		if (enableTemplate && tempLoadPrefs.getPrefType("extensions.multitemplateloader."+gETL_currentIdentity.key+".enable_reply_forward") != 0)
+			enableReplyTemplate = tempLoadPrefs.getBoolPref("extensions.multitemplateloader."+gETL_currentIdentity.key+".enable_reply_forward");
 
 		// Disable the template load just for once
 		if (temp) {
 			enableTemplate = false;
-			tempLoadPrefs.setBoolPref("extensions.externaltemplateloader.load.normal", false);
+			tempLoadPrefs.setBoolPref("extensions.multitemplateloader.load.normal", false);
 		}
 		// Force to load a different template, with the variable extraurl
 		// The extra variable contains a index that is > 0 if the user has chosen
@@ -59,8 +59,8 @@ function PreLoadTemplate() {
 		// In this case the extra variable contains the number of the template to load.
 		else if (extra > 0) {
 			enableTemplate = true;
-			extraurl = tempLoadPrefs.getCharPref("extensions.externaltemplateloader.extra.file"+extra);
-			tempLoadPrefs.setIntPref("extensions.externaltemplateloader.load.extra", 0);
+			extraurl = tempLoadPrefs.getCharPref("extensions.multitemplateloader.extra.file"+extra);
+			tempLoadPrefs.setIntPref("extensions.multitemplateloader.load.extra", 0);
 		}
 
 		// Call the funcion that loads the template for new messages
@@ -217,8 +217,8 @@ function LoadTemplate(templateReply,manually_or_new) {
 		gETL_editor &&
 		gETL_editor.document.getElementsByTagName("blockquote")[1] &&
 		templateReply &&
-		tempLoadPrefs.getPrefType("extensions.externaltemplateloader."+gETL_currentIdentity.key+".disable_reply_recursive") > 0 &&
-		tempLoadPrefs.getBoolPref("extensions.externaltemplateloader."+gETL_currentIdentity.key+".disable_reply_recursive")
+		tempLoadPrefs.getPrefType("extensions.multitemplateloader."+gETL_currentIdentity.key+".disable_reply_recursive") > 0 &&
+		tempLoadPrefs.getBoolPref("extensions.multitemplateloader."+gETL_currentIdentity.key+".disable_reply_recursive")
 	)
 		return;
 
@@ -226,8 +226,8 @@ function LoadTemplate(templateReply,manually_or_new) {
 	// If extraurl is null, we must load the predefinied template, otherwise the template indicated in extraurl
 	if (extraurl == null) {
 		// Get the prefs for current identity
-		if ( tempLoadPrefs.getPrefType("extensions.externaltemplateloader."+gETL_currentIdentity.key+".file") != 0)
-			var templatePath = tempLoadPrefs.getCharPref("extensions.externaltemplateloader."+gETL_currentIdentity.key+".file");
+		if ( tempLoadPrefs.getPrefType("extensions.multitemplateloader."+gETL_currentIdentity.key+".file") != 0)
+			var templatePath = tempLoadPrefs.getCharPref("extensions.multitemplateloader."+gETL_currentIdentity.key+".file");
 		else
 			var templatePath = "";
 	}
@@ -248,7 +248,7 @@ function LoadTemplate(templateReply,manually_or_new) {
 
 function LoadTemplateIntoEditor(templateReply, templatePath, data, manually_or_new) {
 	// If it's not a regular html file, the function stops
-	var checkHTML =  tempLoadPrefs.getBoolPref("extensions.externaltemplateloader.load.checkHTML");
+	var checkHTML =  tempLoadPrefs.getBoolPref("extensions.multitemplateloader.load.checkHTML");
 	if ( checkHTML && data.toUpperCase().indexOf("<!DOCTYPE") !=0 && data.toUpperCase().indexOf("<HTML") !=0) {
 		ETLdeleteStyle();
 		alert(templateBundle.GetStringFromName("badTemplate"));
@@ -261,7 +261,7 @@ function LoadTemplateIntoEditor(templateReply, templatePath, data, manually_or_n
 		return;
 	}
 	if (gETL_editor) {
-		if (manually_or_new && tempLoadPrefs.getBoolPref("extensions.externaltemplateloader.load_warning") && ETLisContentChanged()) {
+		if (manually_or_new && tempLoadPrefs.getBoolPref("extensions.multitemplateloader.load_warning") && ETLisContentChanged()) {
 			var q = confirm(templateBundle.GetStringFromName("loadWarning"));
 			if (!q) return;
 		}
@@ -272,7 +272,7 @@ function LoadTemplateIntoEditor(templateReply, templatePath, data, manually_or_n
 		var bodyHTML = unescape(gETL_body.innerHTML);
 		// Load the template into the editor
 		data = correctBodyBackgroundAttr(data,templatePath);
-		if (gTemplateCharset && ! tempLoadPrefs.getBoolPref("extensions.externaltemplateloader.charset.ignore"))
+		if (gTemplateCharset && ! tempLoadPrefs.getBoolPref("extensions.multitemplateloader.charset.ignore"))
 			SetDocumentCharacterSet(gTemplateCharset);
 		try {
 			UpdateMailEditCharset();
@@ -345,7 +345,7 @@ function LoadTemplateIntoEditor(templateReply, templatePath, data, manually_or_n
 
 
 		// If the user has enabled this option, add moz-do-not-send="true" for all remote images
-		var mozDoNotSendPref = tempLoadPrefs.getBoolPref("extensions.externaltemplateloader.remote_images.moz_do_not_send");
+		var mozDoNotSendPref = tempLoadPrefs.getBoolPref("extensions.multitemplateloader.remote_images.moz_do_not_send");
 		if (mozDoNotSendPref) {
 			var imgs = gETL_editor.document.getElementsByTagName("img");
 			for (i=0;i<imgs.length;i++) {
@@ -365,8 +365,8 @@ function LoadTemplateIntoEditor(templateReply, templatePath, data, manually_or_n
 
 		var type = gMsgCompose.type;
 
-		if (type == 0 && tempLoadPrefs.getPrefType("extensions.externaltemplateloader."+gETL_currentIdentity.key+".add_signature") != 0 &&
-		    tempLoadPrefs.getBoolPref("extensions.externaltemplateloader."+gETL_currentIdentity.key+".add_signature") && signature)
+		if (type == 0 && tempLoadPrefs.getPrefType("extensions.multitemplateloader."+gETL_currentIdentity.key+".add_signature") != 0 &&
+		    tempLoadPrefs.getBoolPref("extensions.multitemplateloader."+gETL_currentIdentity.key+".add_signature") && signature)
 			setTimeout(ETLsetSignature,500,signature);
 
 		if (type == 1 || type == 2 || type == 6 || type == 7 || type == 8)
@@ -433,12 +433,12 @@ function ETLloadBlank() {
 }
 
 function LoadNormal(event) {
-	tempLoadPrefs.setBoolPref("extensions.externaltemplateloader.load.normal", true);
+	tempLoadPrefs.setBoolPref("extensions.multitemplateloader.load.normal", true);
 	event.stopPropagation();
 }
 
 function LoadExtraFile(event,index) {
-	tempLoadPrefs.setIntPref("extensions.externaltemplateloader.load.extra", index);
+	tempLoadPrefs.setIntPref("extensions.multitemplateloader.load.extra", index);
 	event.stopPropagation();
 }
 
@@ -474,7 +474,7 @@ function ETLisContentChanged() {
 }
 
 function AutoloadTemplateForId() {
-	if (tempLoadPrefs.getBoolPref("extensions.externaltemplateloader.load.auto"))
+	if (tempLoadPrefs.getBoolPref("extensions.multitemplateloader.load.auto"))
 		LoadTemplateForId();
 }
 
@@ -500,7 +500,7 @@ function insertTemplate(extra) {
 
     ETLstoreHTML();
 
-    var templatePath = tempLoadPrefs.getCharPref("extensions.externaltemplateloader.extra.file"+extra);
+    var templatePath = tempLoadPrefs.getCharPref("extensions.multitemplateloader.extra.file"+extra);
 
     var data = "";
     if(templatePath.indexOf("http") == 0 || templatePath.indexOf("ftp") == 0)

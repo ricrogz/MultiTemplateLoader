@@ -20,36 +20,73 @@ window.addEventListener("load", ETLaddListeners, false);
 </script>
 
 <commandset id="composeCommands">
-	<command id="cmd_loadTemplate" oncommand="LoadTemplateForId()" />
+    <command id="cmd_loadTemplate_Blank" oncommand="ETLloadBlank()" />
+	<command id="cmd_loadTemplate_External" oncommand="LoadTemplateForId()" />
+    <command id="cmd_loadTemplate_1" oncommand="LoadExtraFile(event,1); insertTemplate(1);" />
+    <command id="cmd_loadTemplate_2" oncommand="LoadExtraFile(event,2); insertTemplate(2);" />
+    <command id="cmd_loadTemplate_3" oncommand="LoadExtraFile(event,3); insertTemplate(3);" />
+    <command id="cmd_loadTemplate_4" oncommand="LoadExtraFile(event,4); insertTemplate(4);" />
+    <command id="cmd_loadTemplate_5" oncommand="LoadExtraFile(event,5); insertTemplate(5);" />
+    <command id="cmd_loadTemplate_6" oncommand="LoadExtraFile(event,6); insertTemplate(6);" />
+    <command id="cmd_loadTemplate_7" oncommand="LoadExtraFile(event,7); insertTemplate(7);" />
+    <command id="cmd_loadTemplate_8" oncommand="LoadExtraFile(event,8); insertTemplate(8);" />
+    <command id="cmd_loadTemplate_9" oncommand="LoadExtraFile(event,9); insertTemplate(9);" />
 </commandset>
 
 <keyset id="tasksKeys">
-	<key id="key_loadTemplate" key="T" modifiers="accel, shift" command="cmd_loadTemplate" />
+    <key id="key_loadTemplate_External" key="T" modifiers="accel, shift" command="cmd_loadTemplate_External" />
+    <key id="key_loadTemplate_1" keycode="VK_F1" modifiers="accel" command="cmd_loadTemplate_1" />
+    <key id="key_loadTemplate_2" keycode="VK_F2" modifiers="accel" command="cmd_loadTemplate_2" />
+    <key id="key_loadTemplate_3" keycode="VK_F3" modifiers="accel" command="cmd_loadTemplate_3" />
+    <key id="key_loadTemplate_4" keycode="VK_F4" modifiers="accel" command="cmd_loadTemplate_4" />
+    <key id="key_loadTemplate_5" keycode="VK_F5" modifiers="accel" command="cmd_loadTemplate_5" />
+    <key id="key_loadTemplate_6" keycode="VK_F6" modifiers="accel" command="cmd_loadTemplate_6" />
+    <key id="key_loadTemplate_7" keycode="VK_F7" modifiers="accel" command="cmd_loadTemplate_7" />
+    <key id="key_loadTemplate_8" keycode="VK_F8" modifiers="accel" command="cmd_loadTemplate_8" />
+    <key id="key_loadTemplate_9" keycode="VK_F9" modifiers="accel" command="cmd_loadTemplate_9" />
+    <key id="key_loadTemplate_Blank" keycode="VK_F12" modifiers="accel" command="cmd_loadTemplate_Blank" />
 </keyset>
 
 <menupopup id="taskPopup">
 	<menu label="&optionsTitle;">
         <menupopup id="templateMenu" onpopupshowing="fillTemplateMenu()">
-        <menuitem id="TLitem0" label="&normalbutton;" tooltiptext="&normalbutton;" oncommand="ETLloadBlank()" />
-        <menuitem id="TLitem1" label="" tooltiptext="&numTemplate; 1" oncommand="LoadExtraFile(event,1); insertTemplate(1)" collapsed="true" />
-        <menuitem id="TLitem2" label="" tooltiptext="&numTemplate; 2" oncommand="LoadExtraFile(event,2); insertTemplate(2)" collapsed="true" />
-        <menuitem id="TLitem3" label="" tooltiptext="&numTemplate; 3" oncommand="LoadExtraFile(event,3); insertTemplate(3)" collapsed="true" />
-        <menuitem id="TLitem4" label="" tooltiptext="&numTemplate; 4" oncommand="LoadExtraFile(event,4); insertTemplate(4)" collapsed="true" />
-        <menuitem id="TLitem5" label="" tooltiptext="&numTemplate; 5" oncommand="LoadExtraFile(event,5); insertTemplate(5)" collapsed="true" />
-        <menuitem id="TLitem6" label="" tooltiptext="&numTemplate; 6" oncommand="LoadExtraFile(event,6); insertTemplate(6)" collapsed="true" />
-        <menuitem id="TLitem7" label="" tooltiptext="&numTemplate; 7" oncommand="LoadExtraFile(event,7); insertTemplate(7)" collapsed="true" />
-        <menuitem id="TLitem8" label="" tooltiptext="&numTemplate; 8" oncommand="LoadExtraFile(event,8); insertTemplate(8)" collapsed="true" />
-        <menuitem id="TLitem9" label="" tooltiptext="&numTemplate; 9" oncommand="LoadExtraFile(event,9); insertTemplate(9)" collapsed="true" />
-        <menuseparator />
-        <menuitem id="TLitemList" label="&editList;" tooltiptext="&editListTip;" oncommand="openExtraDialog(event);" />
-        <menuseparator />
-        <menuitem id="TLitemOpen" label="&loadFile;" tooltiptext="&loadFileTip;" url="" oncommand="loadExternalFile(event);" />
-    </menupopup>
+            <menuitem id="TLitem0" label="&normalbutton;" tooltiptext="&normalbutton;" command="cmd_loadTemplate_Blank" />
+            <menuitem id="TLitem1" label="" tooltiptext="&numTemplate; 1" command="cmd_loadTemplate_1" collapsed="true" />
+            <menuitem id="TLitem2" label="" tooltiptext="&numTemplate; 2" command="cmd_loadTemplate_2" collapsed="true" />
+            <menuitem id="TLitem3" label="" tooltiptext="&numTemplate; 3" command="cmd_loadTemplate_3" collapsed="true" />
+            <menuitem id="TLitem4" label="" tooltiptext="&numTemplate; 4" command="cmd_loadTemplate_4" collapsed="true" />
+            <menuitem id="TLitem5" label="" tooltiptext="&numTemplate; 5" command="cmd_loadTemplate_5" collapsed="true" />
+            <menuitem id="TLitem6" label="" tooltiptext="&numTemplate; 6" command="cmd_loadTemplate_6" collapsed="true" />
+            <menuitem id="TLitem7" label="" tooltiptext="&numTemplate; 7" command="cmd_loadTemplate_7" collapsed="true" />
+            <menuitem id="TLitem8" label="" tooltiptext="&numTemplate; 8" command="cmd_loadTemplate_8" collapsed="true" />
+            <menuitem id="TLitem9" label="" tooltiptext="&numTemplate; 9" command="cmd_loadTemplate_9" collapsed="true" />
+            <menuseparator />
+            <menuitem id="TLitemList" label="&editList;" tooltiptext="&editListTip;" oncommand="openExtraDialog(event);" />
+            <menuseparator />
+            <menuitem id="TLitemOpen" label="&loadFile;" tooltiptext="&loadFileTip;" url="" command="cmd_loadTemplate_External" />
+        </menupopup>
 	</menu>
 </menupopup>
 
 <toolbarpalette id="MsgComposeToolbarPalette">
-	<toolbarbutton id="ETLbutton" command="cmd_loadTemplate" label="&extraTemplate;" tooltiptext="&TLtooltip2;" class="toolbarbutton-1" />
+	<toolbarbutton id="ETLbutton" command="loadExternalFile(event);" label="&extraTemplate;" tooltiptext="&TLtooltip2;" class="toolbarbutton-1" type="menu-button">
+        <menupopup id="BtemplateMenu" onpopupshowing="fillTemplateMenu()">
+            <menuitem id="BTLitem0" label="&normalbutton;" tooltiptext="&normalbutton;" command="cmd_loadTemplate_Blank" />
+            <menuitem id="BTLitem1" label="" tooltiptext="&numTemplate; 1" command="cmd_loadTemplate_1" collapsed="true" />
+            <menuitem id="BTLitem2" label="" tooltiptext="&numTemplate; 2" command="cmd_loadTemplate_2" collapsed="true" />
+            <menuitem id="BTLitem3" label="" tooltiptext="&numTemplate; 3" command="cmd_loadTemplate_3" collapsed="true" />
+            <menuitem id="BTLitem4" label="" tooltiptext="&numTemplate; 4" command="cmd_loadTemplate_4" collapsed="true" />
+            <menuitem id="BTLitem5" label="" tooltiptext="&numTemplate; 5" command="cmd_loadTemplate_5" collapsed="true" />
+            <menuitem id="BTLitem6" label="" tooltiptext="&numTemplate; 6" command="cmd_loadTemplate_6" collapsed="true" />
+            <menuitem id="BTLitem7" label="" tooltiptext="&numTemplate; 7" command="cmd_loadTemplate_7" collapsed="true" />
+            <menuitem id="BTLitem8" label="" tooltiptext="&numTemplate; 8" command="cmd_loadTemplate_8" collapsed="true" />
+            <menuitem id="BTLitem9" label="" tooltiptext="&numTemplate; 9" command="cmd_loadTemplate_9" collapsed="true" />
+            <menuseparator />
+            <menuitem id="TLitemList" label="&editList;" tooltiptext="&editListTip;" oncommand="openExtraDialog(event);" />
+            <menuseparator />
+            <menuitem id="TLitemOpen" label="&loadFile;" tooltiptext="&loadFileTip;" url="" command="cmd_loadTemplate_External" />
+        </menupopup>
+    </toolbarbutton>
 </toolbarpalette>
 
 </overlay>

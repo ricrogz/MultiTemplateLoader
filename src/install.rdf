@@ -5,12 +5,13 @@ xmlns:em="http://www.mozilla.org/2004/em-rdf#">
 
 	<Description about="urn:mozilla:install-manifest">
 	
-		<em:id>{aaf23341-212c-43c4-8824-e51cfe051345}</em:id>
+		<em:id>{d4a7903e-3122-4194-8fc5-4bebfb7a0b1f}</em:id>
 		<em:name>MultiTemplateLoader</em:name>
 		<em:version>0.1</em:version>
 		<em:description>Loads from multiple templates for new/reply messages</em:description>
-		<em:creator>invik</em:creator>
-		<em:contributor>invik</em:contributor>
+		<em:creator>ricrogz</em:creator>
+		<em:contributor>Paolo Kaosmos</em:contributor>
+		<em:contributor>Christian Mayer</em:contributor>
 		<em:homepageURL>https://github.com/ricrogz/MultiTemplateLoader</em:homepageURL>
 		<em:updateURL></em:updateURL>
 		<em:file>
@@ -30,8 +31,8 @@ xmlns:em="http://www.mozilla.org/2004/em-rdf#">
 		<em:targetApplication>
 			<Description>
 				 <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
-        				<em:minVersion>1.5</em:minVersion>
-        				<em:maxVersion>100.*</em:maxVersion>
+						<em:minVersion>1.5</em:minVersion>
+						<em:maxVersion>100.*</em:maxVersion>
 			</Description>
 		</em:targetApplication>
 

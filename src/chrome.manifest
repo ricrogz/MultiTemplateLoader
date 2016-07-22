@@ -1,14 +1,14 @@
 overlay	chrome://messenger/content/messengercompose/messengercompose.xul	chrome://templateloader/content/templateloader.xul
 overlay	chrome://messenger/content/messenger.xul	chrome://templateloader/content/mainWindowOverlay.xul
-content	templateloader	jar:chrome/templateloader.jar!/content/templateloader/
+content	templateloader	chrome/content/templateloader/
 style   chrome://global/content/customizeToolbar.xul  chrome://templateloader/content/templateloader.css
 
-locale	templateloader	en-US	jar:chrome/templateloader.jar!/locale/en-US/templateloader/
-locale	templateloader	it-IT	jar:chrome/templateloader.jar!/locale/it-IT/templateloader/
-locale	templateloader  fr-FR	jar:chrome/templateloader.jar!/locale/fr-FR/templateloader/
-locale	templateloader  da-DK	jar:chrome/templateloader.jar!/locale/da-DK/templateloader/
-locale	templateloader  pl-PL	jar:chrome/templateloader.jar!/locale/pl-PL/templateloader/
-locale	templateloader  zh-TW	jar:chrome/templateloader.jar!/locale/zh-TW/templateloader/
-locale	templateloader	es-ES	jar:chrome/templateloader.jar!/locale/es-ES/templateloader/
-locale	templateloader	de-DE	jar:chrome/templateloader.jar!/locale/de-DE/templateloader/
-locale	templateloader	ru	jar:chrome/templateloader.jar!/locale/ru/templateloader/
+locale	templateloader	en-US	chrome/locale/en-US/templateloader/
+locale	templateloader	it-IT	chrome/locale/it-IT/templateloader/
+locale	templateloader  fr-FR	chrome/locale/fr-FR/templateloader/
+locale	templateloader  da-DK	chrome/locale/da-DK/templateloader/
+locale	templateloader  pl-PL	chrome/locale/pl-PL/templateloader/
+locale	templateloader  zh-TW	chrome/locale/zh-TW/templateloader/
+locale	templateloader	es-ES	chrome/locale/es-ES/templateloader/
+locale	templateloader	de-DE	chrome/locale/de-DE/templateloader/
+locale	templateloader	ru	chrome/locale/ru/templateloader/
