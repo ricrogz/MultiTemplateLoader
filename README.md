@@ -1,5 +1,6 @@
 # MultiTemplateLoader
-Thunderbird plugin. Forked from https://freeshell.de/~kaosmos/templateloader-en.html (which seems it is not longer in development)
+
+A Thunderbird plugin to manage message templates. Forked from https://freeshell.de/~kaosmos/templateloader-en.html (which seems it is not longer in development)
 
 Made it some time ago to easen email sending and replying (it is useful to be able to create templates and use them with a few keystrokes). I can't remember the features, but it seems that I added the possibility of choosing from multiple templates, and also I seem to recall that I implemented shorcut keys.
 
