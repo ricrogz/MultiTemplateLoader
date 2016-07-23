@@ -50,20 +50,20 @@ window.addEventListener("load", ETLaddListeners, false);
 <menupopup id="taskPopup">
 	<menu label="&optionsTitle;">
         <menupopup id="templateMenu" onpopupshowing="fillTemplateMenu()">
-            <menuitem id="TLitem0" label="&normalbutton;" tooltiptext="&normalbutton;" command="cmd_loadTemplate_Blank" />
-            <menuitem id="TLitem1" label="" tooltiptext="&numTemplate; 1" command="cmd_loadTemplate_1" collapsed="true" />
-            <menuitem id="TLitem2" label="" tooltiptext="&numTemplate; 2" command="cmd_loadTemplate_2" collapsed="true" />
-            <menuitem id="TLitem3" label="" tooltiptext="&numTemplate; 3" command="cmd_loadTemplate_3" collapsed="true" />
-            <menuitem id="TLitem4" label="" tooltiptext="&numTemplate; 4" command="cmd_loadTemplate_4" collapsed="true" />
-            <menuitem id="TLitem5" label="" tooltiptext="&numTemplate; 5" command="cmd_loadTemplate_5" collapsed="true" />
-            <menuitem id="TLitem6" label="" tooltiptext="&numTemplate; 6" command="cmd_loadTemplate_6" collapsed="true" />
-            <menuitem id="TLitem7" label="" tooltiptext="&numTemplate; 7" command="cmd_loadTemplate_7" collapsed="true" />
-            <menuitem id="TLitem8" label="" tooltiptext="&numTemplate; 8" command="cmd_loadTemplate_8" collapsed="true" />
-            <menuitem id="TLitem9" label="" tooltiptext="&numTemplate; 9" command="cmd_loadTemplate_9" collapsed="true" />
+            <menuitem id="TLitem0" label="&normalbutton;" tooltiptext="&normalbutton;" command="cmd_loadTemplate_Blank" acceltext="Ctrl+F12" />
+            <menuitem id="TLitem1" label="" tooltiptext="&numTemplate; 1" command="cmd_loadTemplate_1" collapsed="true" acceltext="Ctrl+F1" />
+            <menuitem id="TLitem2" label="" tooltiptext="&numTemplate; 2" command="cmd_loadTemplate_2" collapsed="true" acceltext="Ctrl+F2" />
+            <menuitem id="TLitem3" label="" tooltiptext="&numTemplate; 3" command="cmd_loadTemplate_3" collapsed="true" acceltext="Ctrl+F3" />
+            <menuitem id="TLitem4" label="" tooltiptext="&numTemplate; 4" command="cmd_loadTemplate_4" collapsed="true" acceltext="Ctrl+F4" />
+            <menuitem id="TLitem5" label="" tooltiptext="&numTemplate; 5" command="cmd_loadTemplate_5" collapsed="true" acceltext="Ctrl+F5" />
+            <menuitem id="TLitem6" label="" tooltiptext="&numTemplate; 6" command="cmd_loadTemplate_6" collapsed="true" acceltext="Ctrl+F6" />
+            <menuitem id="TLitem7" label="" tooltiptext="&numTemplate; 7" command="cmd_loadTemplate_7" collapsed="true" acceltext="Ctrl+F7" />
+            <menuitem id="TLitem8" label="" tooltiptext="&numTemplate; 8" command="cmd_loadTemplate_8" collapsed="true" acceltext="Ctrl+F8" />
+            <menuitem id="TLitem9" label="" tooltiptext="&numTemplate; 9" command="cmd_loadTemplate_9" collapsed="true" acceltext="Ctrl+F9" />
             <menuseparator />
             <menuitem id="TLitemList" label="&editList;" tooltiptext="&editListTip;" oncommand="openExtraDialog(event);" />
             <menuseparator />
-            <menuitem id="TLitemOpen" label="&loadFile;" tooltiptext="&loadFileTip;" url="" command="cmd_loadTemplate_External" />
+            <menuitem id="TLitemOpen" label="&loadFile;" tooltiptext="&loadFileTip;" url="" command="cmd_loadTemplate_External" acceltext="Ctrl+Shift+T" />
         </menupopup>
 	</menu>
 </menupopup>
@@ -71,20 +71,20 @@ window.addEventListener("load", ETLaddListeners, false);
 <toolbarpalette id="MsgComposeToolbarPalette">
 	<toolbarbutton id="ETLbutton" command="loadExternalFile(event);" label="&extraTemplate;" tooltiptext="&TLtooltip2;" class="toolbarbutton-1" type="menu-button">
         <menupopup id="BtemplateMenu" onpopupshowing="fillTemplateMenu()">
-            <menuitem id="BTLitem0" label="&normalbutton;" tooltiptext="&normalbutton;" command="cmd_loadTemplate_Blank" />
-            <menuitem id="BTLitem1" label="" tooltiptext="&numTemplate; 1" command="cmd_loadTemplate_1" collapsed="true" />
-            <menuitem id="BTLitem2" label="" tooltiptext="&numTemplate; 2" command="cmd_loadTemplate_2" collapsed="true" />
-            <menuitem id="BTLitem3" label="" tooltiptext="&numTemplate; 3" command="cmd_loadTemplate_3" collapsed="true" />
-            <menuitem id="BTLitem4" label="" tooltiptext="&numTemplate; 4" command="cmd_loadTemplate_4" collapsed="true" />
-            <menuitem id="BTLitem5" label="" tooltiptext="&numTemplate; 5" command="cmd_loadTemplate_5" collapsed="true" />
-            <menuitem id="BTLitem6" label="" tooltiptext="&numTemplate; 6" command="cmd_loadTemplate_6" collapsed="true" />
-            <menuitem id="BTLitem7" label="" tooltiptext="&numTemplate; 7" command="cmd_loadTemplate_7" collapsed="true" />
-            <menuitem id="BTLitem8" label="" tooltiptext="&numTemplate; 8" command="cmd_loadTemplate_8" collapsed="true" />
-            <menuitem id="BTLitem9" label="" tooltiptext="&numTemplate; 9" command="cmd_loadTemplate_9" collapsed="true" />
+            <menuitem id="BTLitem0" label="&normalbutton;" tooltiptext="&normalbutton;" command="cmd_loadTemplate_Blank" acceltext="Ctrl+F12" />
+            <menuitem id="BTLitem1" label="" tooltiptext="&numTemplate; 1" command="cmd_loadTemplate_1" collapsed="true" acceltext="Ctrl+F1" />
+            <menuitem id="BTLitem2" label="" tooltiptext="&numTemplate; 2" command="cmd_loadTemplate_2" collapsed="true" acceltext="Ctrl+F2" />
+            <menuitem id="BTLitem3" label="" tooltiptext="&numTemplate; 3" command="cmd_loadTemplate_3" collapsed="true" acceltext="Ctrl+F3" />
+            <menuitem id="BTLitem4" label="" tooltiptext="&numTemplate; 4" command="cmd_loadTemplate_4" collapsed="true" acceltext="Ctrl+F4" />
+            <menuitem id="BTLitem5" label="" tooltiptext="&numTemplate; 5" command="cmd_loadTemplate_5" collapsed="true" acceltext="Ctrl+F5" />
+            <menuitem id="BTLitem6" label="" tooltiptext="&numTemplate; 6" command="cmd_loadTemplate_6" collapsed="true" acceltext="Ctrl+F6" />
+            <menuitem id="BTLitem7" label="" tooltiptext="&numTemplate; 7" command="cmd_loadTemplate_7" collapsed="true" acceltext="Ctrl+F7" />
+            <menuitem id="BTLitem8" label="" tooltiptext="&numTemplate; 8" command="cmd_loadTemplate_8" collapsed="true" acceltext="Ctrl+F8" />
+            <menuitem id="BTLitem9" label="" tooltiptext="&numTemplate; 9" command="cmd_loadTemplate_9" collapsed="true" acceltext="Ctrl+F9" />
             <menuseparator />
             <menuitem id="TLitemList" label="&editList;" tooltiptext="&editListTip;" oncommand="openExtraDialog(event);" />
             <menuseparator />
-            <menuitem id="TLitemOpen" label="&loadFile;" tooltiptext="&loadFileTip;" url="" command="cmd_loadTemplate_External" />
+            <menuitem id="TLitemOpen" label="&loadFile;" tooltiptext="&loadFileTip;" url="" command="cmd_loadTemplate_External" acceltext="Ctrl+Shift+T" />
         </menupopup>
     </toolbarbutton>
 </toolbarpalette>
