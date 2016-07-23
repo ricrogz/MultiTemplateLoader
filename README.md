@@ -8,6 +8,13 @@ Made it some time ago to easen email sending and replying (it is useful to be ab
 
 Link to official Mozilla addon page: https://addons.mozilla.org/es/firefox/addon/multitemplateloader/
 
+# Main features
+
+- A default template may be configured for each identity (email account) to be used as default template when composing a new message.
+- Up to 9 templates may be configured for quick usage.
+- HTML templates can be used from local files or from HTTP or FTP links.
+- Shortcut keys for quick template loading.
+- HTML templates may include fields for quoting text (replies, forwards), attachments and default cursor positioning.
 
 # Documentation
 
