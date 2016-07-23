@@ -7,7 +7,7 @@
 <script type="application/x-javascript" src="chrome://templateloader/content/mainWindowOverlay.js" />
 
 <toolbarbutton id="button-newmsg" type="menu-button">
-        <menupopup id="templateMenu" onpopupshowing="fillTemplateMenu()">
+    <menupopup id="templateMenu" onpopupshowing="fillTemplateMenu()">
 		<menuitem id="TLitem0" label="&normalbutton;" tooltiptext="&normalbutton;" oncommand="LoadNormal(event); NewMessageHTML();" />
 		<menuitem id="TLitem1" label="" tooltiptext="&numTemplate; 1" oncommand="LoadExtraFile(event,1); NewMessageHTML()" collapsed="true" />
 		<menuitem id="TLitem2" label="" tooltiptext="&numTemplate; 2" oncommand="LoadExtraFile(event,2); NewMessageHTML()" collapsed="true" />
@@ -28,7 +28,7 @@
 <menupopup id="taskPopup">
 	<menu label="&optionsTitle;" insertbefore="filtersCmd">
 		<menupopup>
-		<menuitem label="&TLmenuitem1;" tooltiptext="&TLtooltip1;" oncommand="openTemplateDialog()" />
+			<menuitem label="&TLmenuitem1;" tooltiptext="&TLtooltip1;" oncommand="openTemplateDialog()" />
 		</menupopup>
 	</menu>
 </menupopup>

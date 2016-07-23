@@ -17,7 +17,6 @@ function fillTemplateMenu() {
 		else {
 			document.getElementById("TLitem"+i).removeAttribute("collapsed");
 			if (btn) btn.removeAttribute("collapsed");
-
 		}
 		// If there is an error in nsILocalFile we skip this item
 		try {
@@ -35,8 +34,7 @@ function fillTemplateMenu() {
 						btn.setAttribute("style", "font-style: oblique");
 						btn.setAttribute("disabled", "true");
 					}
-				}
-				else {
+				} else {
 					document.getElementById("TLitem"+i).removeAttribute("style");
 					document.getElementById("TLitem"+i).removeAttribute("disabled");
 					if (btn) {
@@ -44,8 +42,7 @@ function fillTemplateMenu() {
 						btn.removeAttribute("disabled");
 					}
 				}
-			 }
-			else {
+			} else {
 				filename = templatePath.split("/");
 				var filename_noext = filename[filename.length-1];
 				filename_noext = filename_noext.substring(0,filename_noext.lastIndexOf("."));
@@ -53,10 +50,10 @@ function fillTemplateMenu() {
 				if (btn) btn.label = i + ". [HTTP] "+filename_noext;
 			}
 		}
-			catch(e) {
-				document.getElementById("TLitem"+i).setAttribute("collapsed", "true");
-				if (btn) btn.setAttribute("collapsed", "true");
-			}
+		catch(e) {
+			document.getElementById("TLitem"+i).setAttribute("collapsed", "true");
+			if (btn) btn.setAttribute("collapsed", "true");
+		}
 	}
 }
 
@@ -77,13 +74,19 @@ function NewMessageHTML() {
 	ComposeMessage(mcType.New, 1, loadedFolder, messageArray);
 }
 
-function loadExternalFile(event) {
+function loadExternalFile(event, newCompose = true) {
 	event.stopPropagation();
 	var filePath = getFilePathFromFilepicker();
 	if (filePath) {
+		oldValue = tempLoadPrefs.getIntPref("extensions.multitemplateloader.load.extra");
 		tempLoadPrefs.setCharPref("extensions.multitemplateloader.extra.file99", filePath);
 		tempLoadPrefs.setIntPref("extensions.multitemplateloader.load.extra", 99);
-		NewMessageHTML();
+		if (newCompose)
+			NewMessageHTML();
+		else {
+			insertTemplate(99, false);
+		}
+		tempLoadPrefs.setIntPref("extensions.multitemplateloader.load.extra", oldValue);
 	}
 }
 
@@ -97,8 +100,7 @@ function getFilePathFromFilepicker() {
 	if (res==nsIFilePicker.returnOK) {
 		var filePath = fp.file.path;
 		return filePath;
-	}
-	else
+	} else
 		return false;
 }
 

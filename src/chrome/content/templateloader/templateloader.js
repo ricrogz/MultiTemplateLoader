@@ -498,10 +498,11 @@ function LoadTemplateForId() {
 	var reply = false;
 	if ((blockquotes[0] && blockquotes[0].getAttribute("type") == "cite") || gMsgCompose.type == 4)
 		reply = true;
+	extraurl = null;
 	LoadTemplate(reply, true);
 }
 
-function insertTemplate(extra) {
+function insertTemplate(extra, templateReply = true) {
     gETL_editor = GetCurrentEditor();
 
     try {
@@ -520,6 +521,7 @@ function insertTemplate(extra) {
     else {
         data = LoadDataFromFile(templatePath);
         if (data)
-            LoadTemplateIntoEditor(true, templatePath, data, true)
+            LoadTemplateIntoEditor(templateReply, templatePath, data, true)
     }
+    tempLoadPrefs.setIntPref("extensions.multitemplateloader.load.extra", 0);
 }
