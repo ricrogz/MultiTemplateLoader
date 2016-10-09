@@ -1,3 +1,5 @@
+[![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/mmistakes/minimal-mistakes/master/LICENSE.txt)
+
 # MultiTemplateLoader
 
 A Thunderbird plugin to manage message templates. Forked from https://freeshell.de/~kaosmos/templateloader-en.html (which seems it is not longer in development)
