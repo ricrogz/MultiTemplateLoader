@@ -57,7 +57,6 @@ function fillTemplateMenu() {
 	}
 }
 
-
 function openExtraDialog(event) {
 	openDialog("chrome://templateloader/content/extraOptions.xul", "", "chrome,modal");
 	event.stopPropagation();
@@ -83,9 +82,7 @@ function loadExternalFile(event, newCompose = true) {
 		tempLoadPrefs.setIntPref("extensions.multitemplateloader.load.extra", 99);
 		if (newCompose)
 			NewMessageHTML();
-		else {
-			insertTemplate(99, false);
-		}
+		insertTemplate(99, false);
 		tempLoadPrefs.setIntPref("extensions.multitemplateloader.load.extra", oldValue);
 	}
 }
