@@ -1,5 +1,5 @@
 pref("extensions.multitemplateloader.load.normal", false);
-pref("extensions.{d4a7903e-3122-4194-8fc5-4bebfb7a0b1f}.description", "chrome://templateloader/locale/templateloader.properties");
+pref("extensions.{d4a7903e-3122-4194-8fc5-4bebfb7a0b1f}.description", "chrome://mtpll/locale/mtpll.properties");
 pref("extensions.multitemplateloader.load.delay", 500);
 pref("extensions.multitemplateloader.load.extra",0);
 pref("extensions.multitemplateloader.extra.file99", "");

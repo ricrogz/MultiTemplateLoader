@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay SYSTEM "chrome://mtpll/locale/mtpll.dtd">
+
+<dialog xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" onload="extraTemplate.load()"
+    ondialogaccept="extraTemplate.save()" buttons="accept, cancel" title="&extraTitle;">
+
+    <script type="application/x-javascript" src="chrome://mtpll/content/mailWindowOverlay.js" />
+    <script type="application/x-javascript" src="chrome://mtpll/content/extraOptions.js" />
+
+    <groupbox>
+        <hbox>
+            <label id="extralabel1" value="&extraTemplate; 1:" />
+            <textbox id="extraURI1" value="" width="300px" />
+            <button label="&TLbrowse;" oncommand="extraTemplate.filePicker(this)" />
+        </hbox>
+        <hbox>
+            <label id="extralabel2" value="&extraTemplate; 2:" />
+            <textbox id="extraURI2" value="" width="300px" />
+            <button label="&TLbrowse;" oncommand="extraTemplate.filePicker(this)" />
+        </hbox>
+        <hbox>
+            <label id="extralabel3" value="&extraTemplate; 3:" />
+            <textbox id="extraURI3" value="" width="300px" />
+            <button label="&TLbrowse;" oncommand="extraTemplate.filePicker(this)" />
+        </hbox>
+        <hbox>
+            <label id="extralabel4" value="&extraTemplate; 4:" />
+            <textbox id="extraURI4" value="" width="300px" />
+            <button label="&TLbrowse;" oncommand="extraTemplate.filePicker(this)" />
+        </hbox>
+        <hbox>
+            <label id="extralabel5" value="&extraTemplate; 5:" />
+            <textbox id="extraURI5" value="" width="300px" />
+            <button label="&TLbrowse;" oncommand="extraTemplate.filePicker(this)" />
+        </hbox>
+        <hbox>
+            <label id="extralabel6" value="&extraTemplate; 6:" />
+            <textbox id="extraURI6" value="" width="300px" />
+            <button label="&TLbrowse;" oncommand="extraTemplate.filePicker(this)" />
+        </hbox>
+        <hbox>
+            <label id="extralabel7" value="&extraTemplate; 7:" />
+            <textbox id="extraURI7" value="" width="300px" />
+            <button label="&TLbrowse;" oncommand="extraTemplate.filePicker(this)" />
+        </hbox>
+        <hbox>
+            <label id="extralabel8" value="&extraTemplate; 8:" />
+            <textbox id="extraURI8" value="" width="300px" />
+            <button label="&TLbrowse;" oncommand="extraTemplate.filePicker(this)" />
+        </hbox>
+        <hbox>
+            <label id="extralabel9" value="&extraTemplate; 9:" />
+            <textbox id="extraURI9" value="" width="300px" />
+            <button label="&TLbrowse;" oncommand="extraTemplate.filePicker(this)" />
+        </hbox>
+    </groupbox>
+
+</dialog>

@@ -1,14 +1,14 @@
-overlay	chrome://messenger/content/messengercompose/messengercompose.xul	chrome://templateloader/content/templateloader.xul
-overlay	chrome://messenger/content/messenger.xul	chrome://templateloader/content/mainWindowOverlay.xul
-content	templateloader	chrome/content/templateloader/
-style   chrome://global/content/customizeToolbar.xul  chrome://templateloader/content/templateloader.css
+content mtpll                                                               chrome/mtpll/content/
+overlay chrome://messenger/content/mailWindowOverlay.xul                    chrome://mtpll/content/mailWindowOverlay.xul
+overlay chrome://messenger/content/messengercompose/messengercompose.xul    chrome://mtpll/content/mtpll.xul
+style   chrome://messenger/content/customizeToolbar.xul                     chrome://mtpll/content/mtpll.css
 
-locale	templateloader	en-US	chrome/locale/en-US/templateloader/
-locale	templateloader	it-IT	chrome/locale/it-IT/templateloader/
-locale	templateloader  fr-FR	chrome/locale/fr-FR/templateloader/
-locale	templateloader  da-DK	chrome/locale/da-DK/templateloader/
-locale	templateloader  pl-PL	chrome/locale/pl-PL/templateloader/
-locale	templateloader  zh-TW	chrome/locale/zh-TW/templateloader/
-locale	templateloader	es-ES	chrome/locale/es-ES/templateloader/
-locale	templateloader	de-DE	chrome/locale/de-DE/templateloader/
-locale	templateloader	ru	chrome/locale/ru/templateloader/
+locale    mtpll  en-US    chrome/mtpll/locale/en-US/
+locale    mtpll  it-IT    chrome/mtpll/locale/it-IT/
+locale    mtpll  fr-FR    chrome/mtpll/locale/fr-FR/
+locale    mtpll  da-DK    chrome/mtpll/locale/da-DK/
+locale    mtpll  pl-PL    chrome/mtpll/locale/pl-PL/
+locale    mtpll  zh-TW    chrome/mtpll/locale/zh-TW/
+locale    mtpll  es-ES    chrome/mtpll/locale/es-ES/
+locale    mtpll  de-DE    chrome/mtpll/locale/de-DE/
+locale    mtpll  ru       chrome/mtpll/locale/ru/
