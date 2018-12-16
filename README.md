@@ -1,4 +1,4 @@
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/ricrogz/MultiTemplateLoader/master/LICENSE.txt)
+[![GitHub license](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://raw.githubusercontent.com/ricrogz/MultiTemplateLoader/master/LICENSE.txt)
 
 # MultiTemplateLoader
 
@@ -6,7 +6,7 @@ A Thunderbird plugin to manage message templates. Forked from https://freeshell.
 
 Made it some time ago to easen email sending and replying (it is useful to be able to create templates and use them with a few keystrokes). I can't remember the features, but it seems that I added the possibility of choosing from multiple templates, and also I seem to recall that I implemented shorcut keys.
 
-**Extension is now working in Thunderbird 45.2.0**
+**Extension is now working in Thunderbird 60.0**
 
 Link to official Mozilla addon page: https://addons.mozilla.org/es/firefox/addon/multitemplateloader/
 
@@ -31,4 +31,3 @@ Also, shortcut keys in the from of Control + F-num keys are available from the c
 # TO DO
 
 - Improve the documentation.
-- Include sample template files.
