@@ -210,7 +210,7 @@ function LoadDataFromUrl(templatePath,templateReply,manually_or_new) {
 
 function ETLstoreHTML() {
     if (! gETL_origHTML && gETL_editor)
-        gETL_origHTML = gETL_editor.document.body.textContent;
+        gETL_origHTML = gETL_editor.document.body.innerHTML;
 }
 
 function LoadTemplate(templateReply,manually_or_new) {
@@ -328,7 +328,7 @@ function LoadTemplateIntoEditor(templateReply, templatePath, data, manually_or_n
         // This special div is for predefined content (possibile - for ex. - in mailto links)
         var contentDiv = gETL_editor.document.getElementById("predefinedDIV");
         if (templateReply && quoteDiv) {
-            quoteDiv.textContent = gETL_origHTML;
+            quoteDiv.innerHTML = gETL_origHTML;
             if (contentDiv)
                 contentDiv.parentNode.removeChild(contentDiv);
         }

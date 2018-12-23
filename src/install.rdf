@@ -7,7 +7,7 @@ xmlns:em="http://www.mozilla.org/2004/em-rdf#">
         <em:type>2</em:type>
         <em:id>{d4a7903e-3122-4194-8fc5-4bebfb7a0b1f}</em:id>
         <em:name>MultiTemplateLoader</em:name>
-        <em:version>0.1.8</em:version>
+        <em:version>0.1.9.1</em:version>
         <em:description>Loads from multiple templates for new/reply messages</em:description>
         <em:creator>ricrogz</em:creator>
         <em:contributor>Paolo Kaosmos</em:contributor>
