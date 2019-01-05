@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
-<!DOCTYPE overlay SYSTEM "chrome://mtpll/locale/mtpll.dtd">
 
 <?xml-stylesheet href="chrome://mtpll/content/mtpll.css" type="text/css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://mtpll/locale/mtpll.dtd">
 
 <overlay id="TemplateOverlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
