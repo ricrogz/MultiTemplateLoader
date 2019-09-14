@@ -1,3 +1,10 @@
+
+THIS ADD-ON IS OFFICIALLY ABANDONED
+===================================
+
+(expect no more updates, I can't keep up with the changes in Thunderbird)
+
+
 [![GitHub license](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://raw.githubusercontent.com/ricrogz/MultiTemplateLoader/master/LICENSE.txt)
 
 # MultiTemplateLoader
